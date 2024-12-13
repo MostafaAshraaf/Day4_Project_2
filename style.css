@@ -1,0 +1,181 @@
+/* Global Reset and Styling */
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+main {
+    background-color: black;
+    height: 100vh;
+    display: flex;
+}
+
+.SideBar {
+    background-color: #111F2E;
+    color: white;
+    width: 110px;
+    height: 100%;
+    padding: 10px;
+    transition: width .3s;
+}
+
+@media (min-width:552px) {
+    .SideBar:hover {
+        width: 250px;
+    
+        p,h3 {
+            display:block ;
+        }
+    
+        .profile img {
+            width: 40%;
+        }
+    
+        i {
+            font-size: 20px;
+        }
+    }
+    
+}
+
+
+.SideBar p,
+h3 {
+    display: none;
+}
+
+
+
+.profile {
+    display: flex;
+    align-items: center;
+    padding-left: 10px;
+}
+
+.profile img {
+    width: 100%;
+    border-radius: 100%;
+    border: 3px white solid;
+    transition: width .3s;
+}
+
+.profile h3 {
+    font-size: 25px;
+    padding-left: 10px;
+}
+
+.SideBar ul li {
+    display: flex;
+    padding: 15px 0;
+    font-size: 20px;
+    margin: 15px;
+    border-radius: 10px;
+    align-items: center;
+}
+
+.SideBar ul li:hover {
+    background-color: #4C4B56;
+}
+
+.SideBar ul .home {
+    background-color: #4C4B56;
+}
+
+.SideBar ul li i {
+    padding: 0 12px;
+    font-size: 30px;
+
+
+}
+
+.SideBar ul .logOut_btn {
+    background-color: red;
+    margin-top: 45px;
+    padding: 5px 0;
+}
+
+
+main .content {
+    width: 93%;
+    background-color: black;
+    padding: 15px;
+    color: white;
+}
+
+/* #0074FD */
+
+.content .titel,
+.products {
+    background-color: #0074FD;
+    padding: 7px 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 10px;
+}
+
+.content .counters {
+    display: flex;
+    flex-wrap:wrap;
+    gap: 5px;
+    /* justify-content: space-between; */
+    margin: 10px 0;
+}
+
+.content .counters .counter {
+    background-color: #111F2E;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    font-size: 30px;
+    border-radius: 10px;
+    height: 120px;
+}
+
+.content .counters .counter:hover{
+    background-color: #4C4B56;
+}
+
+@media (min-width:886px) {
+    .content .counters .counter {
+        width: calc(25% - 5px) ;
+        height: 120px;
+    }
+}
+@media (max-width:886px) {
+    .content .counters .counter {
+        width: calc(50% - 5px) ;
+        height: 90px;
+    }
+}
+@media (max-width:552px) {
+    .content .counters .counter {
+        width: 100% ;
+        height: 70px;
+    }
+
+}
+
+.content .products_table table {
+    width: 100%;
+    text-align: center;
+    margin-top: 10px;
+    border-spacing:7px ;
+    height:100% ;
+}
+
+.content .products_table table th,td {
+    background-color: #111F2E;
+    border-radius: 10px;
+    padding: 10px;
+}
+table td:hover{
+    background-color:#4C4B56 ;
+}
+.content .products_table table th{
+    background-color: #0074FD;
+}
